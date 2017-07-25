@@ -2,25 +2,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { DocRouterModule } from './documentation/doc-router.module';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { DocComponent } from './documentation/doc.component';
 
 const routes: Routes = [
-    { path: 'home', component: HomeComponent },
-    { path: 'documentation', component: DocComponent },
-    { path: '', redirectTo: '/home', pathMatch: 'full' }
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'home', component: HomeComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    DocComponent,
     HomeComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes, {enableTracing: true})
+    RouterModule.forRoot(routes, {enableTracing: true}),
+    DocRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
