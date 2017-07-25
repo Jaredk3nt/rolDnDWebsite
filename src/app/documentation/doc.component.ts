@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'doc-component',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['../app.component.scss']
 })
 export class DocComponent {
-  title = 'app';
+  active = 'overview';
+
+  activate(item:string) {
+      this.active = item;
+  }
 }

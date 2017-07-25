@@ -12,36 +12,30 @@
                 World
               </p>
               <ul class="menu-list">
-                <li><a>Overview</a></li>
-                <li><a>History</a></li>
-                <li><a>Systems</a></li>
+                <menu-item [(active)]="active" [link]="'/documentation/world'" [title]="'Overview'"></menu-item>
+                <menu-item [(active)]="active" [link]="'/documentation/world'" [title]="'History'"></menu-item>
+                <menu-item [(active)]="active" [link]="'/documentation/world'" [title]="'Systems'"></menu-item>
               </ul>
               <p class="menu-label">
                 Character Info
               </p>
               <ul class="menu-list">
-                <li><a>Races</a></li>
-                <li>
-                  <a class="is-active">Classes</a>
-                  <ul>
-                    <li><a>Adept</a></li>
-                    <li><a>Enhanced</a></li>
-                    <li><a>'Normal'</a></li>
-                  </ul>
-                </li>
-                <li><a>Abilities</a></li>
-                <li><a>Equipment/Items</a></li>
+                <menu-item [(active)]="active" [link]="'/documentation/character'" [title]="'Races'"></menu-item>
+                <menu-item [(active)]="active" [link]="'/documentation/character'" [title]="'Classes'"></menu-item>
+                <menu-item [(active)]="active" [link]="'/documentation/charcter'" [title]="'Abilities'"></menu-item>
+                <menu-item [(active)]="active" [link]="'/documentation/character'" [title]="'Equipment/Items'"></menu-item>
               </ul>
               <p class="menu-label">
                 Monsters
               </p>
               <ul class="menu-list">
-                <li><a>Humanoid</a></li>
-                <li><a>Beast</a></li>
+                <menu-item [(active)]="active" [link]="'/documentation/monsters'" [title]="'Humanoid'"></menu-item>
+                <menu-item [(active)]="active" [link]="'/documentation/monsters'" [title]="'Beast'"></menu-item>
               </ul>
             </aside>
         </div>
         <div class="is-three-quarters">
+            <!-- SUB ROUTER FOR DOCUMENTATION -->
             <router-outlet></router-outlet>
         </div>
     </div>

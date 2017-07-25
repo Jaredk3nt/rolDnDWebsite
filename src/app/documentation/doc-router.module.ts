@@ -1,11 +1,14 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 import { DocComponent } from './doc.component';
 import { DocInfoComponent } from './docinfo.component';
 import { WorldDocComponent } from './world/worlddoc.component';
 import { CharacterDocComponent } from './character/characterdoc.component';
 import { MonsterDocComponent } from './monsters/monsterdoc.component';
+
+import { MenuItemComponent } from './menu-item.component';
 
 const documentationRoutes: Routes = [
     {
@@ -25,10 +28,12 @@ const documentationRoutes: Routes = [
         DocInfoComponent,
         WorldDocComponent,
         CharacterDocComponent,
-        MonsterDocComponent
+        MonsterDocComponent,
+        MenuItemComponent
     ],
     imports: [
-        RouterModule.forChild(documentationRoutes)
+        RouterModule.forChild(documentationRoutes),
+        CommonModule
     ],
     exports: [
         RouterModule
