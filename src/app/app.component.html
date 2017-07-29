@@ -13,9 +13,9 @@
     <div class="tabs is-boxed is-centered is-medium is-fullwidth">
       <div class="container">
         <ul>
-          <li [ngClass]="active === 'home' ? 'is-active' : '' " > <a  routerLink="/home" (click)="settab()"> Home </a> </li>
-          <li [ngClass]="active === 'documentation' ? 'is-active' : '' " > <a (click)="setTab()" routerLink="/documentation" > Documentation </a> </li>
-          <li [ngClass]="active === 'about' ? 'is-active' : '' " > <a (click)="setTab()" > About </a> </li>
+          <li [ngClass]="active === 'home' ? 'is-active' : '' " > <a  routerLink="/home"> Home </a> </li>
+          <li [ngClass]="active === 'documentation' ? 'is-active' : '' " > <a routerLink="/documentation" > Documentation </a> </li>
+          <li [ngClass]="active === 'about' ? 'is-active' : '' " > <a > About </a> </li>
         </ul>
       </div>
     </div>

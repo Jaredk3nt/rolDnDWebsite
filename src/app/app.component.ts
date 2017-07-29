@@ -15,15 +15,11 @@ export class AppComponent implements OnInit{
     constructor(private router: Router, private urlService: UrlService) { }
 
     ngOnInit() {
-        this.router.events.subscribe((event) => {
-            if(event instanceof NavigationEnd) {
-                this.urlService.setPath(event.url);
-                this.setTab();
+        this.urlService.urlUpdated$.subscribe((url) => {
+            this.active = url[1];
+            if (this.active.length < 1) {
+                this.active = 'home';
             }
         });
-    }
-
-    setTab() {
-        this.active = this.urlService.tabPath;
     }
 }

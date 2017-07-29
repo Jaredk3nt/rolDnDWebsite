@@ -10,15 +10,25 @@ import { UrlService } from '../url.service';
   styleUrls: ['../app.component.scss']
 })
 export class DocComponent implements OnInit {
-    active = 'Overview';
+    active = 'overview';
 
-    constructor(private urlService: UrlService) { }
+    constructor(private urlService: UrlService) {
+        this.urlService.urlUpdated$.subscribe((url) => {
+            let docPath = url[2];
+            if(docPath !== undefined) {
+                this.active = docPath;
+            } else {
+                this.active = 'overview';
+            }
+            console.log(this.active);
+        });
+    }
 
     ngOnInit() {
 
     }
 
     activate(item:string) {
-      this.active = item;
+      
     }
 }
