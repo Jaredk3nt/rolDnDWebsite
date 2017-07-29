@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { DocRouterModule } from './documentation/doc-router.module';
 
+import { UrlService } from './url.service';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
@@ -19,10 +21,12 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes, {enableTracing: true}),
+    RouterModule.forRoot(routes, {enableTracing: false}),
     DocRouterModule
   ],
-  providers: [],
+  providers: [
+      UrlService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

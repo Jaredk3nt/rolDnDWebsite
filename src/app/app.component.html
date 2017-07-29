@@ -1,11 +1,11 @@
-<section id="anim-hero" class="hero is-primary is-bold" [ngClass]="page !== 0 ? '' : 'is-medium' ">
+<section id="anim-hero" class="hero is-primary is-bold">
   <div class="hero-body has-text-centered">
     <div class="container">
       <h1 class="title">
         <strong>Republic of Life D&#38;D</strong>
       </h1>
       <h2 class="subtitle">
-        A homebrew <strong>sci-fi</strong>  5e world
+        A homebrew <strong>sci-fi</strong> world
       </h2>
     </div>
   </div>
@@ -13,9 +13,9 @@
     <div class="tabs is-boxed is-centered is-medium is-fullwidth">
       <div class="container">
         <ul>
-          <li [ngClass]="page === 0 ? 'is-active' : '' " > <a (click)="changePage(0)" routerLink="/home" > Home </a> </li>
-          <li [ngClass]="page === 1 ? 'is-active' : '' " > <a (click)="changePage(1)" routerLink="/documentation" > Documentation </a> </li>
-          <li [ngClass]="page === 2 ? 'is-active' : '' " > <a (click)="changePage(2)" > About </a> </li>
+          <li [ngClass]="active === 'home' ? 'is-active' : '' " > <a  routerLink="/home" (click)="settab()"> Home </a> </li>
+          <li [ngClass]="active === 'documentation' ? 'is-active' : '' " > <a (click)="setTab()" routerLink="/documentation" > Documentation </a> </li>
+          <li [ngClass]="active === 'about' ? 'is-active' : '' " > <a (click)="setTab()" > About </a> </li>
         </ul>
       </div>
     </div>

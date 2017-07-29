@@ -13,6 +13,43 @@ $primary: #805cce;
 
 /* My Styles */
 
+.home-container {
+    padding: 2em 0em;
+}
+.doc {
+    margin-left: 10px;
+}
+.h3-p {
+    color: $primary;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.125;
+    margin-top: 1.3333em;
+    margin-bottom: 0.6666em;
+}
+.title2 {
+    position: relative;
+    display: inline-block;
+    font-size: 1.75em;
+    margin-bottom: 0.25em;
+    font-weight: 400;
+    line-height: 1.125;
+    color: #fff;
+    background: $primary;
+    padding: 5px 25px 5px 10px;
+    left: -10px;
+    width: auto;
+}
+.title3 {
+    @extend .title2;
+    font-size: 1.2em;
+}
+
+.indent-p {
+    margin-left: 40px;
+    margin-bottom: 15px;
+}
+
 
 #anim-hero {
     -webkit-transition: all 0.5s ease;
