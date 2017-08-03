@@ -4,7 +4,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   selector: 'menu-item',
   template: `
     <li>
-        <a [ngClass]="active === title.toLowerCase ? 'is-active' : '' " (click)="activate()" routerLink="{{link}}">{{title}}</a>
+        <a [ngClass]="active === title.toLowerCase() ? 'is-active' : '' " (click)="activate()" routerLink="{{link}}">{{title}}</a>
     </li>
     `
 })

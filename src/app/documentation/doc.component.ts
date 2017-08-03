@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { UrlService } from '../url.service';
@@ -9,7 +9,7 @@ import { UrlService } from '../url.service';
   templateUrl: './doc.component.html',
   styleUrls: ['../app.component.scss']
 })
-export class DocComponent implements OnInit {
+export class DocComponent {
     active = 'overview';
 
     constructor(private urlService: UrlService) {
@@ -22,13 +22,5 @@ export class DocComponent implements OnInit {
             }
             console.log(this.active);
         });
-    }
-
-    ngOnInit() {
-
-    }
-
-    activate(item:string) {
-      
     }
 }

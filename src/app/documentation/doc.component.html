@@ -1,40 +1,38 @@
 <div class="container" style="margin-top: 2em; margin-bottom: 2em">
-    <div class="content has-text-centered">
-        <div class="is-large">
-            <h1>RoL Player's Handbook</h1>
-            <h5>Complete collection of gameplay information &#38; descriptions</h5>
-        </div>
-    </div>
+    <br>
     <div class="columns">
         <div class="column is-one-quarter">
+
             <aside class="menu">
+            <div class="menu-header">RoL Player Guide</div>
+            <div class="rol-hr"></div>
               <p class="menu-label">
                 World
               </p>
               <ul class="menu-list">
                 <menu-item [(active)]="active" [link]="'/documentation/'" [title]="'Overview'"></menu-item>
-                <menu-item [(active)]="active" [link]="'/documentation/world'" [title]="'History'"></menu-item>
-                <menu-item [(active)]="active" [link]="'/documentation/world'" [title]="'Systems'"></menu-item>
+                <menu-item [(active)]="active" [link]="'/documentation/history'" [title]="'History'"></menu-item>
+                <menu-item [(active)]="active" [link]="'/documentation/systems'" [title]="'Systems'"></menu-item>
               </ul>
               <p class="menu-label">
                 Character Info
               </p>
               <ul class="menu-list">
-                <menu-item [(active)]="active" [link]="'/documentation/character'" [title]="'Races'"></menu-item>
-                <menu-item [(active)]="active" [link]="'/documentation/character'" [title]="'Classes'"></menu-item>
-                <menu-item [(active)]="active" [link]="'/documentation/character'" [title]="'Abilities'"></menu-item>
-                <menu-item [(active)]="active" [link]="'/documentation/character'" [title]="'Items'"></menu-item>
+                <menu-item [(active)]="active" [link]="'/documentation/races'" [title]="'Races'"></menu-item>
+                <menu-item [(active)]="active" [link]="'/documentation/classes'" [title]="'Classes'"></menu-item>
+                <menu-item [(active)]="active" [link]="'/documentation/abilities'" [title]="'Abilities'"></menu-item>
+                <menu-item [(active)]="active" [link]="'/documentation/items'" [title]="'Items'"></menu-item>
               </ul>
               <p class="menu-label">
                 Monsters
               </p>
               <ul class="menu-list">
-                <menu-item [(active)]="active" [link]="'/documentation/monsters'" [title]="'Humanoid'"></menu-item>
-                <menu-item [(active)]="active" [link]="'/documentation/monsters'" [title]="'Beast'"></menu-item>
+                <menu-item [(active)]="active" [link]="'/documentation/humanoids'" [title]="'Humanoid'"></menu-item>
+                <menu-item [(active)]="active" [link]="'/documentation/beasts'" [title]="'Beast'"></menu-item>
               </ul>
             </aside>
         </div>
-        <div class="is-three-quarters">
+        <div class="is-three-quarters container doc-container">
             <!-- SUB ROUTER FOR DOCUMENTATION -->
             <router-outlet></router-outlet>
         </div>

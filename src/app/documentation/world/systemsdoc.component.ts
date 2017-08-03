@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'world-doc-component',
-  templateUrl: './worlddoc.component.html',
+  selector: 'systems-doc-component',
+  templateUrl: './systemsdoc.component.html',
   styleUrls: ['../../app.component.scss']
 })
-export class WorldDocComponent {
+export class SystemsDocComponent {
   title = 'app';
 }
