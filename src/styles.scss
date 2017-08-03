@@ -3,17 +3,27 @@ $primary: #423b77;//#805cce;
 $primary-dark: #553e8d;
 $primary-light: #24275b;
 
-// .is-medium {
-//     -webkit-transition: all 0.5s ease;
-//     -moz-transition: all 0.5s ease;
-//     -o-transition: all 0.5s ease;
-//     transition: all 0.5s ease;
-// }
+$doc-background-grey: #f8f8f8;
+
 
 /* Imports */
 @import '../node_modules/bulma/bulma';
 
 /* My Styles */
+.content blockquote {
+    background: #ededed;
+    border-left: 5px solid #d9d9d9;
+}
+
+.rol-title {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.rol-title2 {
+    @extend .rol-title;
+    font-size: 2em;
+}
 
 .home-container {
     padding: 2em 0em;
@@ -69,7 +79,7 @@ $primary-light: #24275b;
 .doc-content {
     margin-left: 10px;
     padding:5% 7%;
-    background: #f8f8f8;
+    background: $doc-background-grey;
     border-radius: 5px;
 
     .doc-header {
@@ -85,6 +95,11 @@ $primary-light: #24275b;
     height: 1px;
     margin: .5rem 0rem 1.5rem 0rem;
     width: 90%;
+}
+
+.rol-icon {
+    display: inline-block;
+    padding: 0 1rem;
 }
 
 
