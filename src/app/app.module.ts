@@ -6,6 +6,8 @@ import { DocRouterModule } from './documentation/doc-router.module';
 
 import { UrlService } from './url.service';
 
+import { CapitalizePipe } from './pipes/capitalize.pipe';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BuilderComponent } from './builder/builder.component';
@@ -23,7 +25,8 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     BuilderComponent,
-    AboutComponent
+    AboutComponent,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,

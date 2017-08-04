@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CapitalizePipe } from '../pipes/capitalize.pipe';
 
 @Component({
     selector: 'builder-component',

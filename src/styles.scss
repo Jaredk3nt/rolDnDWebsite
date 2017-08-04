@@ -44,21 +44,36 @@ $darker-grey: #ededed;
         .input[disabled] {
             background: $darker-grey;
         }
-    }
 
 
-
-    .field-inline {
-        display: inline-block;
-    }
-
-    .name-input {
-        display: inline-block;
+        .ability-label {
+            font-size: .85rem;
+            overflow: hidden;
+            text-align: center;
+        }
     }
 
     .age-input {
         width: 50%;
     }
+
+    .input-info {
+        font-size: .8rem;
+        color: #7e7e7e;
+        background: $darker-grey;
+        padding: .5em 1em;
+        margin: .2em 0em;
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-centered {
+    text-align: center;
 }
 
 .h3-p {
