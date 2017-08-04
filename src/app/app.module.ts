@@ -8,11 +8,13 @@ import { UrlService } from './url.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { BuilderComponent } from './builder/builder.component';
 import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
+    { path: 'builder', component: BuilderComponent},
     { path: 'about', component: AboutComponent }
 ];
 
@@ -20,6 +22,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
+    BuilderComponent,
     AboutComponent
   ],
   imports: [
